@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Peter's Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=Rubik:wght@600;700&display=swap');
+    </style>
+    <style>
+        :root {
+            --theme-main-color: #0d5a8d;
+            --theme-accent-color: #3baefb;
+            --theme-background-color: #ededed;
+            --theme-white-color: #fbfbfb;
+            --theme-black-color: #444;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: Rubik, sans-serif;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        body {
+            width: 100%;
+            font-family: Nunito, sans-serif;
+            font-size: 14px;
+            color: var(--theme-black-color);
+            margin: 0;
+            background-color: var(--theme-background-color);
+            padding: 45px 0;
+        }
+
+        article {
+            max-width: 760px;
+            min-width: 375px;
+            margin: 0 auto;
+            padding: 40px 45px;
+            background-color: var(--theme-white-color);
+            box-shadow: 0 5px 10px 0 darkgrey;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "header header"
+                "profile-header profile-section"
+                "experience-header experience-section"
+                "education-header education-section";
+            grid-row-gap: 1em;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        a {
+            color: var(--theme-main-color);
+        }
+
+        #profile-header {
+            grid-area: profile-header;
+        }
+
+        #profile-section {
+            grid-area: profile-section;
+        }
+
+        #experience-header {
+            grid-area: experience-header;
+        }
+
+        #experience-section {
+            grid-area: experience-section;
+        }
+
+        #education-header {
+            grid-area: education-header;
+        }
+
+        #education-section {
+            grid-area: education-section;
+        }
+
+        #name-title {
+            margin-top: 0;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+        }
+
+        #job-title {
+            display: block;
+            font-size: 1.5em;
+            color: var(--theme-main-color);
+            margin-bottom: 1em;
+        }
+
+        #contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-column-gap: 0.5em;
+            grid-row-gap: 0.5em;
+        }
+
+        #contact-details > span {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        #contact-details > span > svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--theme-black-color);
+            margin-right: 0.5rem;
+        }
+
+        .role-section {
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .role-section:not(:first-child) {
+            margin-top: 3em;
+        }
+
+        .role-section__title {
+            font-family: Nunito, sans-serif;
+            margin-left: -21px;
+        }
+
+        .role-section__block-text {
+            display: block;
+        }
+
+        .role-section__block-text > strong {
+            font-size: 16px;
+        }
+
+        .role-section__sub-section-title {
+            margin-top: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .highlight {
+            padding-left: 27px;
+            position: relative;
+        }
+
+        .highlight > svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--theme-accent-color);
+            position: absolute;
+            left: 0;
+        }
+
+        @media only screen {
+            .role-section:before {
+                content: ' ';
+                position: absolute;
+                left: 0;
+                top: 3em;
+                bottom: 0;
+                width: 3px;
+                background-color: var(--theme-main-color);
+            }
+        }
+
+        @media only screen and (max-width: 760px) {
+            body {
+                padding: 0;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            article {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "profile-header"
+                    "profile-section"
+                    "experience-header"
+                    "experience-section"
+                    "education-header"
+                    "education-section";
+                grid-row-gap: 0;
+            }
+
+            .role-section__title {
+                font-size: 16px;
+            }
+        }
+
+        @media only print {
+            body {
+                padding: 0;
+            }
+
+            article {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "profile-header"
+                    "profile-section"
+                    "experience-header"
+                    "experience-section"
+                    "education-header"
+                    "education-section";
+                grid-row-gap: 0;
+                box-shadow: none;
+                margin-top: 0;
+            }
+
+            h4, p {
+                page-break-after: avoid;
+            }
+
+            .role-section {
+                padding-left: 0;
+            }
+
+            .role-section__title {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<article>
+    <header>
+        <h1 id="name-title">Peter Yu-Han Chen</h1>
+        <span id="job-title">Senior Software Engineer</span>
+        <div id="contact-details">
+            <span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                <a href="mailto:peter.chen2@mail.mcgill.ca">peter.chen2@mail.mcgill.ca</a>
+            </span>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                <a href="https://www.linkedin.com/in/peter-yhc/" target="_blank">peter.chen2@mail.mcgill.ca</a>
+            </span>
+            <span>
+                <svg id="icon-github" viewBox="0 0 32 32">
+                    <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z" />
+                </svg>
+                <a href="https://github.com/peter-yhc" target="_blank">github/peter-yhc</a>
+            </span>
+            <span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z"
+                          clip-rule="evenodd" />
+                </svg>
+                <a href="tel:+61401687053">0401 687 053</a>
+            </span>
+            <span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                          clip-rule="evenodd" />
+                </svg>
+                Sydney, NSW
+            </span>
+        </div>
+    </header>
+    <h2 id="profile-header">Profile</h2>
+    <p id="profile-section">
+        Software engineer with 9 years of engineering experience. I enjoy the challenge of tackling ambitious ideas
+        and working in environments that encourage team collaboration. My current interest is developing user facing
+        systems.
+    </p>
+    <h2 id="experience-header">Experience</h2>
+    <div id="experience-section">
+        <section class="role-section">
+            <h2 class="role-section__title">Senior Software Engineer</h2>
+            <span class="role-section__block-text"><strong>Tyro Payments</strong></span>
+            <span class="role-section__block-text">2015 - Present, Sydney Australia</span>
+            <div>
+                <h4 class="role-section__sub-section-title">Customer Portal | 2019 - Present</h4>
+                <ul>
+                    <li>Launched a new and enhanced React customer portal to slowly replace old Spring MVC portal</li>
+                    <li>Utilised micro frontend pattern + bffs for multiple new features and updates existing ones</li>
+                    <li>Migrated user authentication from Spring MVC to Auth0</li>
+                    <li>Refreshed customer facing website with more modern design and introduced responsiveness
+                        throughout
+                    </li>
+                    <li>Helped drive better practices in React and general web development</li>
+                </ul>
+                <p class="highlight">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    React, Redux/Toolkit, Typescript, Styled Components, Node.js, Auth0, Spring, Thymeleaf, AWS,
+                    Kubernetes, Webpack
+                </p>
+            </div>
+            <div>
+                <h4 class="role-section__sub-section-title">Pricing Engine Project | 2019</h4>
+                <ul>
+                    <li>Helped introduce team to AWS architecture and tooling</li>
+                    <li>Built web tool used by account managers to do bulk contract reviews and calculate optimal rates
+                        for customers
+                    </li>
+                </ul>
+                <p class="highlight">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    Vue.js, Node.js, Kotlin, Spring, Thymeleaf, AWS, Kubernetes, TDD
+                </p>
+            </div>
+            <div>
+                <h4 class="role-section__sub-section-title">Tyro Connect | 2018</h4>
+                <ul>
+                    <li>Developed an AWS integration with Tyro's point-of-sale terminals and a third party customer feedback system</li>
+                </ul>
+                <p class="highlight">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    Node.js, AWS (λ, Dynamo, SNS, SQS, ECS, IAM), TDD
+                </p>
+            </div>
+            <div>
+                <h4 class="role-section__sub-section-title">Lending Product Project | 2015-2018</h4>
+                <ul>
+                    <li>Built new lending product from inception to limited release in six months, and GA within the
+                        year
+                    </li>
+                    <li>Created accounting, reporting, and transaction systems for loans</li>
+                    <li>Created tooling (web - bootstrap, Spring MVC) for internal staff to manage new product</li>
+                    <li>Collaborated closely with Sales, Finance, Risk, Product, and Operations teams to ensure timely
+                        and quality delivery
+                    </li>
+                    <li>Leveraged Extreme Programming and a microservices architecture to allow for quick
+                        experimentation and team scalability
+                    </li>
+                </ul>
+                <p class="highlight">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    Java, Kotlin, Spring, microservices, distributed architecture, TDD, Bootstrap
+                </p>
+            </div>
+        </section>
+        <section class="role-section">
+            <h2 class="role-section__title">Java Developer</h2>
+            <span class="role-section__block-text"><strong>Ericsson Canada</strong></span>
+            <span class="role-section__block-text">2012 - 2015, Montreal Canada</span>
+            <div>
+                <h4 class="role-section__sub-section-title">Ericsson Cloud Project</h4>
+                <ul>
+                    <li>Built self-serve cloud provisioning system where users could create and manage their own private
+                        cloud environments
+                    </li>
+                    <li>Main integrator for VMware and OpenStack APIs</li>
+                    <li>Contributed to system and architecture decisions</li>
+                </ul>
+                <p class="highlight">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    Java, Spring, PHP, MySQL, VMware, Linux, Scrum
+                </p>
+            </div>
+        </section>
+    </div>
+    <h2 id="education-header">Education</h2>
+    <div id="education-section">
+        <section class="role-section">
+            <h2 class="role-section__title">M.Eng of Electrical Engineering</h2>
+            <strong class="role-section__block-text">McGill University</strong>
+            <span class="role-section__block-text">Montreal 2013</span>
+            <br>
+            <i class="role-section__block-text">
+                Thesis: Investigation of ZnO / CdS / CuInSe2 solar cells using a custom built I-DLTS system
+            </i>
+        </section>
+        <section class="role-section">
+            <h2 class="role-section__title">B.Eng of Electrical Engineering</h2>
+            <strong class="role-section__block-text">McGill University</strong>
+            <span class="role-section__block-text">Montreal 2010</span>
+        </section>
+    </div>
+</article>
+</body>
+</html>
