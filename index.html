@@ -171,7 +171,7 @@
                 content: ' ';
                 position: absolute;
                 left: 0;
-                top: 3em;
+                top: 3.5em;
                 bottom: 0;
                 width: 3px;
                 background-color: var(--theme-main-color);
@@ -185,6 +185,19 @@
         }
 
         @media only screen and (max-width: 600px) {
+            h2 {
+                margin-top: 2em;
+                margin-bottom: 0.5em;
+            }
+
+            .role-section__title {
+                margin-top: 0;
+            }
+
+            .role-section:before {
+                top: 2.5em;
+            }
+
             article {
                 grid-template-columns: 1fr;
                 grid-template-areas:
