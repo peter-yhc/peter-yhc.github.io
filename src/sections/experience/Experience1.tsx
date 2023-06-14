@@ -21,13 +21,15 @@ export default function Experience1() {
               multiple active contributors
             </li>
           </ul>
-          <li>Helped educate better React and modern CSS best practices</li>
-          <li>Worked closely with UX designers to overhaul outdated UI designs and improve usability across
-            multiple features
+          <li>Worked closely with UX designers to overhaul outdated UI designs and improve usability across multiple
+            features
+          </li>
+          <li>Upskilled other developers in better React and modern CSS practices through discussions and paired
+            programming
           </li>
         </ul>
         <Skills>
-          React, Redux/Toolkit, Typescript, Styled Components, Storybook, Spring, Webpack, AWS, MicroServices
+          React, Redux/Toolkit, Typescript, Styled Components, Storybook, Spring, Webpack, AWS, Microservices
         </Skills>
       </JobContent>
       <H3>Senior Software Engineer</H3>
@@ -41,11 +43,11 @@ export default function Experience1() {
           <li>Refreshed customer facing website with more modern design and introduced responsiveness
             throughout
           </li>
-          <li>Helped drive better practices in React and general web development</li>
+          <li>Drove better practices in React and general web development</li>
         </ul>
         <Skills>
           React, Redux/Toolkit, Typescript, Styled Components, Node.js, Auth0, Spring, Thymeleaf, AWS,
-          Kubernetes, Webpack, MicroFrontends, MicroServices
+          Kubernetes, Webpack, Microfrontends, Microservices
         </Skills>
       </JobContent>
       <JobContent>

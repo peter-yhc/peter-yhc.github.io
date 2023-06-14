@@ -10,6 +10,7 @@ export const InvisibleLink = styled.a`
 const ContactContainer = styled.section`
   display: grid;
   grid-template-columns: 32px auto;
+  grid-row-gap: ${props => props.theme.spacing.space_8};
 
   & svg {
     margin-top: -2px;

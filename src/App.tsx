@@ -1,7 +1,7 @@
 import Paper from './sections/paper/Paper.tsx';
-import NameHeader from './sections/title/NameHeader.tsx';
-import Contact from './sections/contact/Contact.tsx';
+import NameHeader from './sections/name/NameHeader.tsx';
 import styled from 'styled-components';
+import Bio from './sections/bio/Bio.tsx';
 import Education from './sections/education/Education.tsx';
 import Experience1 from './sections/experience/Experience1.tsx';
 import Experience2 from './sections/experience/Experience2.tsx';
@@ -24,13 +24,6 @@ const Content = styled.main`
   gap: ${props => props.theme.spacing.space_16};
 `;
 
-const Bio = styled.section`
-  display: flex;
-  justify-content: space-between;
-  gap: ${props => props.theme.spacing.space_48};
-  margin-bottom: 0.5em;
-`;
-
 export default function App() {
 
   return (
@@ -38,16 +31,7 @@ export default function App() {
       <Paper>
         <Content>
           <NameHeader />
-          <Bio>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum sapien sagittis enim
-              blandit
-              ornare. Proin dictum, turpis nec luctus viverra, lectus eros pretium sapien, eu porta massa massa ut nisl.
-              In efficitur lacus turpis. Sed porta aliquet dui placerat efficitur. Quisque in mi quis lacus egestas
-              pretium. Aliquam et augue id massa fringilla suscipit. Integer faucibus interdum eros.
-            </p>
-            <Contact />
-          </Bio>
+          <Bio />
           <Experience1 />
         </Content>
       </Paper>
