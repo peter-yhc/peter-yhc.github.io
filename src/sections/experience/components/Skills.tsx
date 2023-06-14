@@ -11,9 +11,12 @@ const List = styled.ul`
     left: -${props => props.theme.spacing.space_24};
     top: 0;
     content: ' ';
-    width: 2px;
+    width: 0;
     height: 100%;
-    background-color: ${props => props.theme.colours.black300};
+    
+    // use border instead of background-color to prevent divider from disappearing
+    // when printing without backgrounds
+    border: 1px solid ${props => props.theme.colours.black300};
   }
 `;
 

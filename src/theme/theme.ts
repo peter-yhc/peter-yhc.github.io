@@ -1,3 +1,5 @@
+import { createGlobalStyle } from 'styled-components';
+
 const colours = {
   blueGrey200: '#E7ECEF',
   blueGrey600: '#65768E',
@@ -32,3 +34,34 @@ export default {
   lineHeight,
   borders,
 };
+
+export const GlobalStyle = createGlobalStyle`
+  html, body {
+    margin: 0;
+    font-size: 14px;
+    font-family: Nunito, sans-serif;
+    color: ${props => props.theme.colours.black600};
+    line-height: 1.5;
+    @media print {
+      width: 210mm;
+      height: 297mm;
+    }
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ul, p {
+    margin: 0;
+  }
+
+  ul {
+    padding-left: 1em;
+  }
+`;

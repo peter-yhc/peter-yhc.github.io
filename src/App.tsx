@@ -11,17 +11,12 @@ const Background = styled.div`
   gap: ${props => props.theme.spacing.space_48};
 
   display: flex;
-  flex-direction: column;
-`;
-
-const Content = styled.main`
-  width: calc(100% - 2cm);
-  height: calc(100% - 2cm);
-  background-color: white;
-  padding: ${props => props.theme.spacing.space_32};
-  display: flex;
-  flex-direction: column;
-  gap: ${props => props.theme.spacing.space_16};
+  flex-wrap: wrap;
+  
+  @media print {
+    padding: 0;
+    gap: 0;
+  }
 `;
 
 export default function App() {
@@ -29,17 +24,13 @@ export default function App() {
   return (
     <Background>
       <Paper>
-        <Content>
           <NameHeader />
           <Bio />
           <Experience1 />
-        </Content>
       </Paper>
       <Paper>
-        <Content>
           <Experience2 />
           <Education />
-        </Content>
       </Paper>
     </Background>
   );

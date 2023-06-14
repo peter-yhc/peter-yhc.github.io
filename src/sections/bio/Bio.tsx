@@ -4,8 +4,7 @@ import Contact from './components/Contact.tsx';
 const BioContainer = styled.section`
   display: flex;
   justify-content: space-between;
-  gap: ${props => props.theme.spacing.space_48};
-  margin-bottom: 0.5em;
+  column-gap: ${props => props.theme.spacing.space_48};
 `;
 
 export default function Bio() {
