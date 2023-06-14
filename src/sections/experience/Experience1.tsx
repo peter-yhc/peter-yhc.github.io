@@ -29,7 +29,7 @@ export default function Experience1() {
           </li>
         </ul>
         <Skills>
-          React, Redux/Toolkit, Typescript, Styled Components, Storybook, Spring, Webpack, AWS, Microservices
+          React, Redux/Toolkit, Typescript, Styled Components, Storybook, Figma, Spring, Webpack, TDD, AWS, Microservices
         </Skills>
       </JobContent>
       <H3>Senior Software Engineer</H3>
@@ -46,8 +46,8 @@ export default function Experience1() {
           <li>Drove better practices in React and general web development</li>
         </ul>
         <Skills>
-          React, Redux/Toolkit, Typescript, Styled Components, Node.js, Auth0, Spring, Thymeleaf, AWS,
-          Kubernetes, Webpack, Microfrontends, Microservices
+          React, Redux/Toolkit, Typescript, Styled Components, Node.js, Figma, Auth0, Spring, Thymeleaf, AWS,
+          Webpack, microfrontends, microservices
         </Skills>
       </JobContent>
       <JobContent>
@@ -59,7 +59,7 @@ export default function Experience1() {
           </li>
         </ul>
         <Skills>
-          Vue.js, Node.js, Kotlin, Spring, Kubernetes, TDD, AWS (λ, Dynamo, SNS, SQS, ECS, IAM)
+          Vue.js, Node.js, Kotlin, Spring, Kubernetes, TDD, AWS
         </Skills>
       </JobContent>
     </section>
