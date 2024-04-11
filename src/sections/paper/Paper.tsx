@@ -35,6 +35,13 @@ const Container = styled.div((({ theme }) => css`
 
   @media print {
     box-shadow: none;
+    &:before {
+        background-color: white;
+    }
+
+    &:after {
+        background-color: white;
+    }
   }
 `));
 
