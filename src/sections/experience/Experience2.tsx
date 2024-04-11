@@ -8,6 +8,18 @@ export default function Experience1() {
     <section>
       <JobContent>
         <ul>
+          <strong>Pricing Engine Project</strong>
+          <li>Helped introduce team to AWS architecture and tooling</li>
+          <li>Built web tool used by account managers to do bulk contract reviews and calculate optimal rates
+            for customers
+          </li>
+        </ul>
+        <Skills>
+          Vue.js, Node.js, Kotlin, Spring, Kubernetes, TDD, AWS (ECS, SNS, SQS, λ, DynamoDB)
+        </Skills>
+      </JobContent>
+      <JobContent>
+        <ul>
           <strong>Lending Product Project</strong>
           <li>Built new lending product from inception to limited release in six months, and GA within the
             year
@@ -21,7 +33,7 @@ export default function Experience1() {
             experimentation and team scalability
           </li>
         </ul>
-        <Skills>Java, Kotlin, Spring, microservices, distributed architecture, TDD</Skills>
+        <Skills>Java, Kotlin, Spring, microservices, high availability architecture, TDD</Skills>
       </JobContent>
 
       <H3>Java Developer</H3>

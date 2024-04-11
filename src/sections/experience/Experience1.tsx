@@ -27,9 +27,14 @@ export default function Experience1() {
           <li>Upskilled other developers in better React and modern CSS practices through discussions and paired
             programming
           </li>
+          <li>
+            Tackled considerable technical frontend debt in replacing unmaintained third party libraries, upgrading
+            React, streamlining webpack builds
+          </li>
         </ul>
         <Skills>
-          React, Redux/Toolkit, Typescript, Styled Components, Storybook, Figma, Spring, Webpack, TDD, AWS, Microservices
+          React, Redux/Toolkit, Typescript, Styled Components, Storybook, Figma, Spring, Webpack, TDD, AWS (SNS, SQS,
+          RDS, λ, ECS), microservices
         </Skills>
       </JobContent>
       <H3>Senior Software Engineer</H3>
@@ -46,20 +51,8 @@ export default function Experience1() {
           <li>Drove better practices in React and general web development</li>
         </ul>
         <Skills>
-          React, Redux/Toolkit, Typescript, Styled Components, Node.js, Figma, Auth0, Spring, Thymeleaf, AWS,
-          Webpack, microfrontends, microservices
-        </Skills>
-      </JobContent>
-      <JobContent>
-        <ul>
-          <strong>Pricing Engine Project</strong>
-          <li>Helped introduce team to AWS architecture and tooling</li>
-          <li>Built web tool used by account managers to do bulk contract reviews and calculate optimal rates
-            for customers
-          </li>
-        </ul>
-        <Skills>
-          Vue.js, Node.js, Kotlin, Spring, Kubernetes, TDD, AWS
+          React, Redux/Toolkit, Typescript, Styled Components, Node.js, Figma, Auth0, Spring, Thymeleaf,
+          Webpack, micro frontends, microservices, high availability architecture
         </Skills>
       </JobContent>
     </section>
