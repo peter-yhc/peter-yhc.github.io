@@ -24,7 +24,7 @@ export default function Experience1() {
           <li>Worked closely with UX designers to overhaul outdated UI designs and improve usability across multiple
             features
           </li>
-          <li>Upskilled other developers in better React and modern CSS practices through discussions and paired
+          <li>Upskilled fellow developers in better React and modern CSS practices through discussions and paired
             programming
           </li>
           <li>
