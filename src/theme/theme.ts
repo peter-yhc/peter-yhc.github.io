@@ -9,6 +9,7 @@ const colours = {
 };
 
 const spacing = {
+  space_0: '0px',
   space_4: '4px',
   space_8: '8px',
   space_12: '12px',
@@ -40,7 +41,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 14px;
     font-family: Nunito, sans-serif;
-    color: ${props => props.theme.colours.black600};
+    color: ${(props) => props.theme.colours.black600};
     line-height: 1.5;
     @media print {
       width: 210mm;

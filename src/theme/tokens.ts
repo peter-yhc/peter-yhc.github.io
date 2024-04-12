@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
 export const headingFrame = css`
-  border-top: ${props => props.theme.borders.headers};
-  border-bottom: ${props => props.theme.borders.headers};
+  border-top: ${(props) => props.theme.borders.headers};
+  border-bottom: ${(props) => props.theme.borders.headers};
   line-height: 32px;
 `;
 
@@ -42,14 +42,14 @@ export const H1 = styled.h1<Heading>`
   ${typography.xxlarge};
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin: 0
+  margin: 0;
 `;
 
 export const H2 = styled.h2<Heading>`
   ${typography.xlarge};
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin: 0
+  margin: 0;
 `;
 
 export const H3 = styled.h3<Heading>`
@@ -59,7 +59,7 @@ export const H3 = styled.h3<Heading>`
 
 export const H4 = styled.h4<Heading>`
   ${typography.medium};
-  color: ${props => props.theme.colours.black500};
+  color: ${(props) => props.theme.colours.black500};
   font-weight: 600;
   margin: 0 0 1em 0;
   text-transform: uppercase;

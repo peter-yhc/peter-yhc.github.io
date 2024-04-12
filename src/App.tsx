@@ -7,12 +7,23 @@ import Experience1 from './sections/experience/Experience1.tsx';
 import Experience2 from './sections/experience/Experience2.tsx';
 
 const Background = styled.div`
-  padding: ${props => props.theme.spacing.space_64};
-  gap: ${props => props.theme.spacing.space_48};
+  padding: ${(props) => props.theme.spacing.space_64};
+  gap: ${(props) => props.theme.spacing.space_48};
 
   display: flex;
   flex-wrap: wrap;
-  
+  li {
+    margin-bottom: 3px;
+  }
+
+  @media only screen and (max-width: 640px) {
+    padding: 0;
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
+
   @media print {
     padding: 0;
     gap: 0;
@@ -20,17 +31,16 @@ const Background = styled.div`
 `;
 
 export default function App() {
-
   return (
     <Background>
       <Paper>
-          <NameHeader />
-          <Bio />
-          <Experience1 />
+        <NameHeader />
+        <Bio />
+        <Experience1 />
       </Paper>
       <Paper>
-          <Experience2 />
-          <Education />
+        <Experience2 />
+        <Education />
       </Paper>
     </Background>
   );
