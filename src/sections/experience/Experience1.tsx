@@ -42,7 +42,7 @@ export default function Experience1() {
           Spring, Webpack, TDD, AWS (SNS, SQS, RDS, λ, ECS), microservices
         </Skills>
       </JobContent>
-      <H3>Senior Software Engineer</H3>
+      <H3>Software Engineer</H3>
       <H4>
         <Mono>Tyro Payments | 2015 - 2021</Mono>
       </H4>
